@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Task from "../Task/Task";
 import "./Lane.css";
 
@@ -8,8 +9,13 @@ function Lane({ title, loading, error, tasks }) {
       {loading || error ? (
         <span>{error || "Loading..."}</span>
       ) : (
-        tasks.map((tasks) => (
-          <Task key={tasks.id} key={tasks.title} key={tasks.body} />
+        tasks.map((task) => (
+          <Task
+            key={task.id}
+            id={task.id}
+            title={task.title}
+            body={task.body}
+          />
         ))
       )}
     </div>

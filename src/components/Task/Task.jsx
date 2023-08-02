@@ -1,5 +1,6 @@
 import "./Task.css";
 
+// eslint-disable-next-line react/prop-types
 function Task({ title, body }) {
   return (
     <div className="Task-wrapper">
