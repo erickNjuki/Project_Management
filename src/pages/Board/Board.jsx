@@ -54,6 +54,7 @@ function Board() {
           tasks={tasks.filter((task) => task.lane === lane.id)}
           onDragStart={onDragStart}
           onDragOver={onDragOver}
+          onDrop={onDrop}
         />
       ))}
     </div>

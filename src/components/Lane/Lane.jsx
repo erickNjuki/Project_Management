@@ -33,8 +33,8 @@ function Lane({
   onDrop,
 }) {
   return (
-    <LaneWrapper onDragOver={onDragOver}>
-      <h2>{title}</h2>
+    <LaneWrapper onDragOver={onDragOver} onDrop={(e) => onDrop(e, laneId)}>
+      <Title>{title}</Title>
       {loading || error ? (
         <span>{error || "Loading..."}</span>
       ) : (
